@@ -1,0 +1,64 @@
+---
+const faqs = [
+  {
+    q: 'Por quanto tempo terei acesso?',
+    a: 'Você terá acesso integral ao programa e todas as atualizações por 1 ano inteiro.',
+  },
+  {
+    q: 'E se eu não gostar? Tem garantia?',
+    a: 'Sim! Você tem 7 dias de garantia incondicional. Se achar que não é para você, devolvemos 100% do seu dinheiro.',
+  },
+  {
+    q: 'Serve para quem tem rotina corrida?',
+    a: 'Com certeza. O programa foi desenhado com aulas curtas e materiais práticos justamente para quem tem pouco tempo.',
+  },
+]
+---
+
+<section class="py-20 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+  <h2 class="text-3xl font-serif font-bold text-center text-gray-900 mb-12">
+    Perguntas Frequentes
+  </h2>
+  <div class="space-y-4">
+    {
+      faqs.map((faq) => (
+        <details class="group bg-white rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-gray-900 font-medium">
+            <h3 class="text-lg">{faq.q}</h3>
+            <span class="relative h-5 w-5 shrink-0 text-[#1A3626]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0 transition-opacity"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 transition-opacity"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M20 12H4"
+                />
+              </svg>
+            </span>
+          </summary>
+          <p class="px-6 pb-6 text-gray-600 leading-relaxed">{faq.a}</p>
+        </details>
+      ))
+    }
+  </div>
+</section>
