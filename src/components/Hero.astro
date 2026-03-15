@@ -3,28 +3,30 @@ import Button from './Button.astro'
 ---
 
 <section
-  class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12"
+  class="xs:h-fit xs:pt-12 xs:pb-28 xs:gap-12 mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center gap-6 px-4 pt-4 pb-10 sm:px-6 md:flex-row lg:px-8"
 >
   <div class="flex-1 text-center md:text-left">
     <span
-      class="text-[#B08968] font-semibold tracking-wider uppercase text-sm mb-4 block"
-      >Transformação de dentro para fora</span
+      class="mb-4 block text-sm font-semibold tracking-wider text-[#B08968] uppercase"
+      >O intestino a favor do seu emagrecimento</span
     >
     <h1
-      class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight mb-6"
+      class="mb-6 font-serif text-4xl leading-tight font-bold text-gray-900 md:text-5xl lg:text-6xl"
     >
       Conquiste sua melhor versão sem dietas restritivas.
     </h1>
-    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
+    <p class="mx-auto mb-8 max-w-xl text-lg text-gray-600 md:mx-0">
       Um método validado para acabar com o inchaço, recuperar sua energia e
-      transformar sua relação com a comida em apenas 4 semanas.
+      transformar sua relação com a comida em apenas <span class="font-bold"
+        >2 etapas</span
+      >.
     </p>
     <Button href="#checkout" text="Quero Começar Agora" />
     <p
-      class="text-xs text-gray-500 mt-4 flex items-center justify-center md:justify-start gap-2"
+      class="mt-4 flex items-center justify-center gap-2 text-xs text-gray-500 md:justify-start"
     >
       <svg
-        class="w-4 h-4 text-[#1A3626]"
+        class="h-4 w-4 text-[#1A3626]"
         fill="currentColor"
         viewBox="0 0 20 20"
         ><path
@@ -35,17 +37,17 @@ import Button from './Button.astro'
       Acesso imediato após a compra
     </p>
   </div>
-  <div class="flex-1 w-full max-w-md md:max-w-full">
+  <div class="w-full max-w-md md:max-w-full md:flex-1">
     <div
-      class="aspect-[4/5] bg-[#F5EBE6] rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl relative"
+      class="relative aspect-4/3 overflow-hidden rounded-full rounded-b-3xl bg-[#F5EBE6] shadow-2xl md:aspect-4/5"
     >
       <img
         src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop"
         alt="Mulher sorrindo comendo refeição saudável"
-        class="w-full h-full object-cover opacity-90"
+        class="h-full w-full rounded-2xl object-cover opacity-90"
       />
       <div
-        class="absolute inset-0 bg-gradient-to-t from-[#2C4C3B]/40 to-transparent"
+        class="absolute inset-0 rounded-2xl bg-linear-to-t from-[#2C4C3B]/40 to-transparent"
       >
       </div>
     </div>
