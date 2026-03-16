@@ -10,3 +10,86 @@
     --color-surface-alt: #F5EBE6;
     --color-border: #E8E1DB;
 }
+
+/* ── Scroll Animations ── */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide from left */
+[data-animate="slide-left"] {
+    transform: translateX(-32px);
+}
+
+[data-animate="slide-left"].is-visible {
+    transform: translateX(0);
+}
+
+/* Slide from right */
+[data-animate="slide-right"] {
+    transform: translateX(32px);
+}
+
+[data-animate="slide-right"].is-visible {
+    transform: translateX(0);
+}
+
+/* Scale up */
+[data-animate="scale"] {
+    transform: scale(0.95);
+}
+
+[data-animate="scale"].is-visible {
+    transform: scale(1);
+}
+
+/* Stagger children delay */
+[data-animate-stagger]>[data-animate] {
+    --stagger: 0;
+    transition-delay: calc(var(--stagger) * 80ms);
+}
+
+/* Hero specific entrance */
+[data-animate="hero-text"] {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animate="hero-text"].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-animate="hero-image"] {
+    opacity: 0;
+    transform: scale(0.92) translateY(16px);
+    transition:
+        opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s,
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+[data-animate="hero-image"].is-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Navbar scroll effect */
+header[data-navbar] {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+header[data-navbar].scrolled {
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+}
