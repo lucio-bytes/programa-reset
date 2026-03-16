@@ -1,6 +1,7 @@
 ---
 import Button from './Button.astro'
 import { Icon } from 'astro-icon/components'
+import heroImg from '../assets/images/hero.jpg'
 ---
 
 <section
@@ -37,7 +38,7 @@ import { Icon } from 'astro-icon/components'
       class="relative aspect-4/3 overflow-hidden rounded-full rounded-b-3xl bg-[#F5EBE6] shadow-2xl md:aspect-4/5"
     >
       <img
-        src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop"
+        src={heroImg.src}
         alt="Mulher sorrindo comendo refeição saudável"
         class="h-full w-full rounded-2xl object-cover opacity-90"
       />
