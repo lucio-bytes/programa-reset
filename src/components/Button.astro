@@ -1,17 +1,23 @@
 ---
 interface Props {
-  href: string
-  text: string
+  href?: string
+  text?: string
   className?: string
 }
 
-const { href, text, className = '' } = Astro.props
+const {
+  href = 'https://www.google.com',
+  text = 'Quero começar agora',
+  className = '',
+} = Astro.props
 ---
 
 <a
   href={href}
   class={`inline-block bg-primary text-white font-semibold py-4 px-8 rounded-full hover:bg-primary-hover transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center text-sm md:text-base ${className}`}
   aria-label={text}
+  target="_blank"
+  rel="noopener noreferrer"
 >
   {text}
 </a>

@@ -1,0 +1,58 @@
+---
+import Button from './Button.astro'
+import before from '../assets/images/before.jpeg'
+import after from '../assets/images/after.jpeg'
+---
+
+<section class="pb-16 md:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <p class="text-primary mb-10 text-center font-serif text-xl font-bold">
+      Percebe a ligação?
+    </p>
+
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6">
+      <div class="text-center">
+        <h3 class="mb-4 font-serif text-2xl font-bold text-gray-900">
+          Se você quer sair <span class="text-accent">disso</span>:
+        </h3>
+        <div
+          class="border-border bg-surface overflow-hidden rounded-2xl border"
+        >
+          <img
+            src={before.src}
+            alt="Abdômen antes do tratamento"
+            class="aspect-square w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h3 class="mb-4 font-serif text-2xl font-bold text-gray-900">
+          Para <span class="text-primary">isso</span>:
+        </h3>
+        <div
+          class="border-border bg-surface overflow-hidden rounded-2xl border"
+        >
+          <img
+            src={after.src}
+            alt="Abdômen depois do tratamento"
+            class="aspect-square w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-10 text-center text-lg text-gray-600">
+      E com mais <span class="font-semibold text-gray-800">energia</span>,
+      <span class="font-semibold text-gray-800">pele saudável</span> e
+      <span class="font-semibold text-gray-800">controle das suas escolhas</span
+      >.
+    </p>
+
+    <div class="mt-8 text-center">
+      <Button />
+    </div>
+  </div>
+</section>

@@ -1,11 +1,9 @@
 ---
-import Button from './Button.astro'
-import before from '../assets/images/before.jpeg'
-import after from '../assets/images/after.jpeg'
+
 ---
 
 <section class="py-20">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
     <h2
       class="mb-10 text-center font-serif text-3xl font-bold text-gray-900 md:text-4xl"
     >
@@ -54,46 +52,3 @@ import after from '../assets/images/after.jpeg'
     </div>
   </div>
 </section>
-
-<p class="text-primary text-center font-serif text-xl font-bold">
-  Percebe a ligação?
-</p>
-
-<div class="mx-4 mt-16">
-  <h3 class="mb-8 text-center font-serif text-2xl font-bold text-gray-900">
-    Se você quer sair <span class="text-accent">disso</span>:
-  </h3>
-
-  <div class="grid max-w-xl gap-6 sm:grid-cols-2 md:mx-auto">
-    <div class="border-border bg-surface overflow-hidden rounded-2xl border">
-      <img
-        src={before.src}
-        alt="Abdômen antes"
-        class="aspect-square w-full object-cover"
-      />
-    </div>
-
-    <h3
-      class="mt-8 mb-2 text-center font-serif text-2xl font-bold text-gray-900"
-    >
-      Para <span class="text-primary">isso</span>:
-    </h3>
-    <div class="border-border bg-surface overflow-hidden rounded-2xl border">
-      <img
-        src={after.src}
-        alt="Abdômen depois"
-        class="aspect-square w-full object-cover"
-      />
-    </div>
-  </div>
-
-  <p class="mt-8 text-center text-lg text-gray-600">
-    E com mais <span class="font-semibold text-gray-800">energia</span>,
-    <span class="font-semibold text-gray-800">pele saudável</span> e
-    <span class="font-semibold text-gray-800">controle das suas escolhas</span>.
-  </p>
-
-  <div class="mt-8 mb-20 text-center">
-    <Button href="#checkout" text="Quero começar agora" />
-  </div>
-</div>
