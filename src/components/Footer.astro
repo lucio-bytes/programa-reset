@@ -2,6 +2,11 @@
 import { Icon } from 'astro-icon/components'
 
 const year = new Date().getFullYear()
+const whatsappNumber = '5551983522637'
+const encodedMessage =
+  'Ol%C3%A1%21%20Vi%20sua%20p%C3%A1gina%20sobre%20o%20Programa%20Reset%20e%20achei%20incr%C3%ADvel%20a%20proposta%20de%20emagrecimento%2E%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20antes%20de%20me%20inscrever%2E%20Pode%20me%20ajudar%3F'
+
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
 ---
 
 <footer class="bg-primary py-12 text-white">
@@ -21,7 +26,7 @@ const year = new Date().getFullYear()
     </p>
 
     <a
-      href="https://wa.me/5551983522637"
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       class="text-surface/70 mb-8 flex items-center gap-2 text-sm transition-colors hover:text-white"

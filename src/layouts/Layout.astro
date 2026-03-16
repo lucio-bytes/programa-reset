@@ -7,7 +7,7 @@ interface Props {
   image?: string
 }
 
-const { title, description, image = '/og-image.jpg' } = Astro.props
+const { title, description, image = '/og-image.png' } = Astro.props
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url)
 const socialImageURL = new URL(image, Astro.site || Astro.url)
