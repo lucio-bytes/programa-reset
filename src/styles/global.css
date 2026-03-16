@@ -12,6 +12,11 @@
 }
 
 /* ── Scroll Animations ── */
+html,
+body {
+    overflow-x: hidden;
+}
+
 [data-animate] {
     opacity: 0;
     transform: translateY(24px);
