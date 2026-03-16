@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 const pains = [
   'Inchaço constante',
   'Distensão abdominal, gases, intestino preso, diarréia, azia',
@@ -15,17 +17,26 @@ const pains = [
 
 <section class="bg-surface-alt py-20">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto mb-12 max-w-3xl text-center">
+    <div class="mx-auto mb-12 max-w-3xl text-center" data-animate>
       <h2 class="mb-4 font-serif text-2xl font-bold text-gray-900 md:text-4xl">
         O programa <span class="text-primary">RESET</span> é para você que tem quaisquer
         das queixas:
       </h2>
     </div>
-    <div class="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2">
+    <div
+      class="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2"
+      data-animate-stagger
+    >
       {
         pains.map((pain) => (
-          <article class="border-border bg-surface flex items-center gap-3 rounded-xl border px-5 py-4">
-            <span class="text-primary mt-0.5 text-lg">✦</span>
+          <article
+            class="border-border bg-surface flex items-center gap-3 rounded-xl border px-5 py-4"
+            data-animate
+          >
+            <Icon
+              name="lucide:alert-circle"
+              class="text-accent mt-0.5 h-5 w-5 shrink-0"
+            />
             <p class="text-gray-700">{pain}</p>
           </article>
         ))

@@ -26,7 +26,7 @@ const bonus = [
 
 <section class="bg-surface-alt py-20">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto mb-14 max-w-3xl text-center">
+    <div class="mx-auto mb-14 max-w-3xl text-center" data-animate>
       <h2 class="mb-4 font-serif text-3xl font-bold text-gray-900 md:text-4xl">
         O que vai receber no Programa <span class="text-primary font-black"
           >RESET</span
@@ -34,10 +34,16 @@ const bonus = [
       </h2>
     </div>
 
-    <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+    <div
+      class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2"
+      data-animate-stagger
+    >
       {
         etapas.map((etapa) => (
-          <article class="border-border bg-surface rounded-2xl border p-8">
+          <article
+            class="border-border bg-surface rounded-2xl border p-8"
+            data-animate
+          >
             <span class="bg-primary mb-2 inline-block rounded-full px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase">
               {etapa.tag}
             </span>
@@ -59,6 +65,7 @@ const bonus = [
 
     <div
       class="border-border bg-surface mx-auto mt-10 max-w-4xl rounded-2xl border p-8"
+      data-animate
     >
       <h3 class="mb-6 text-center font-serif text-2xl font-bold text-gray-900">
         Bônus
