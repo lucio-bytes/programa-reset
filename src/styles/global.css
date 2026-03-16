@@ -11,7 +11,6 @@
     --color-border: #E8E1DB;
 }
 
-/* ── Scroll Animations ── */
 html,
 body {
     overflow-x: hidden;
@@ -30,7 +29,6 @@ body {
     transform: translateY(0);
 }
 
-/* Slide from left */
 [data-animate="slide-left"] {
     transform: translateX(-32px);
 }
@@ -39,7 +37,6 @@ body {
     transform: translateX(0);
 }
 
-/* Slide from right */
 [data-animate="slide-right"] {
     transform: translateX(32px);
 }
@@ -48,7 +45,6 @@ body {
     transform: translateX(0);
 }
 
-/* Scale up */
 [data-animate="scale"] {
     transform: scale(0.95);
 }
@@ -57,13 +53,11 @@ body {
     transform: scale(1);
 }
 
-/* Stagger children delay */
 [data-animate-stagger]>[data-animate] {
     --stagger: 0;
     transition-delay: calc(var(--stagger) * 80ms);
 }
 
-/* Hero specific entrance */
 [data-animate="hero-text"] {
     opacity: 0;
     transform: translateY(32px);
@@ -90,7 +84,6 @@ body {
     transform: scale(1) translateY(0);
 }
 
-/* Navbar scroll effect */
 header[data-navbar] {
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
