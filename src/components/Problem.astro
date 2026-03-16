@@ -1,0 +1,105 @@
+---
+import Button from './Button.astro'
+import before from '../assets/images/before.jpeg'
+import after from '../assets/images/after.jpeg'
+---
+
+<section class="py-20">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <h2
+      class="mb-10 text-center font-serif text-3xl font-bold text-gray-900 md:text-4xl"
+    >
+      O seu emagrecimento começa no intestino.
+    </h2>
+
+    <div class="space-y-6 text-lg leading-relaxed text-gray-600">
+      <p>
+        É no intestino que o corpo absorve os nutrientes que fazem o metabolismo
+        funcionar corretamente. Quando faltam micronutrientes essenciais como:
+        <span class="font-semibold text-gray-800"
+          >ferro, selênio e magnésio</span
+        >, a tireoide pode reduzir sua atividade. E quando a tireoide
+        desacelera, o metabolismo também fica mais lento, dificultando o
+        emagrecimento.
+      </p>
+
+      <p class="font-serif text-xl font-bold text-[#1A3626]">
+        Mas não é só isso.
+      </p>
+
+      <p>
+        Cerca de <span class="font-semibold text-gray-800"
+          >90% da serotonina</span
+        >, o neurotransmissor responsável pela sensação de prazer e bem-estar,
+        também é produzida no intestino. Quando o intestino não está saudável,
+        essa produção pode diminuir.
+      </p>
+
+      <p class="font-serif text-xl font-bold text-[#1A3626]">
+        E o que acontece?
+      </p>
+
+      <p>
+        Aumenta a vontade por alimentos mais calóricos, especialmente doces e
+        carboidratos. Aquela sensação de que você "sabota" a dieta muitas vezes
+        não é falta de disciplina — pode ser o seu corpo tentando compensar a
+        baixa produção de serotonina.
+      </p>
+
+      <p>
+        Por isso, antes de focar apenas em cortar calorias, é fundamental
+        <span class="font-semibold text-gray-800">cuidar do intestino</span>.
+        Quando o intestino funciona bem, o metabolismo melhora, os hormônios
+        entram em equilíbrio e o processo de emagrecimento se torna muito mais
+        natural.
+      </p>
+    </div>
+  </div>
+</section>
+
+<p class="text-center font-serif text-xl font-bold text-[#1A3626]">
+  Percebe a ligação?
+</p>
+
+<div class="mx-4 mt-16">
+  <h3 class="mb-8 text-center font-serif text-2xl font-bold text-gray-900">
+    Se você quer sair <span class="text-[#B08968]">disso</span>:
+  </h3>
+
+  <div class="grid max-w-xl gap-6 sm:grid-cols-2 md:mx-auto">
+    <div
+      class="overflow-hidden rounded-2xl border border-[#E8E1DB] bg-[#FDFBF7]"
+    >
+      <img
+        src={before.src}
+        alt="Abdômen antes"
+        class="aspect-square w-full object-cover"
+      />
+    </div>
+
+    <h3
+      class="mt-8 mb-2 text-center font-serif text-2xl font-bold text-gray-900"
+    >
+      Para <span class="text-[#1A3626]">isso</span>:
+    </h3>
+    <div
+      class="overflow-hidden rounded-2xl border border-[#E8E1DB] bg-[#FDFBF7]"
+    >
+      <img
+        src={after.src}
+        alt="Abdômen depois"
+        class="aspect-square w-full object-cover"
+      />
+    </div>
+  </div>
+
+  <p class="mt-8 text-center text-lg text-gray-600">
+    E com mais <span class="font-semibold text-gray-800">energia</span>,
+    <span class="font-semibold text-gray-800">pele saudável</span> e
+    <span class="font-semibold text-gray-800">controle das suas escolhas</span>.
+  </p>
+
+  <div class="mt-8 mb-20 text-center">
+    <Button href="#checkout" text="Quero Começar Agora" />
+  </div>
+</div>

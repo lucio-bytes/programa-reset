@@ -1,36 +1,32 @@
 ---
 const pains = [
-  {
-    title: 'Inchaço Constante',
-    desc: 'Acorda bem, mas parece estar grávida no final do dia.',
-  },
-  {
-    title: 'Falta de Energia',
-    desc: 'Depende de café para sobreviver e tem quedas de energia à tarde.',
-  },
-  {
-    title: 'Efeito Sanfona',
-    desc: 'Já tentou de tudo, perde peso, mas ganha tudo de novo meses depois.',
-  },
+  'Inchaço constante',
+  'Distensão abdominal, gases, intestino preso, diarréia, azia',
+  'Dificuldade de reduzir o peso',
+  'Imunidade baixa',
+  'Desejo por doces',
+  'Cabelo afinando e caindo / unhas fracas / pele acneica',
+  'Dor de cabeça com frequência',
+  'Cansaço',
+  'Retenção de líquidos',
+  'Alterações de humor: ansiedade / irritabilidade',
 ]
 ---
 
-<section class="py-20 bg-[#F5EBE6]">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-        Você se identifica com alguma dessas situações?
+<section class="bg-[#F5EBE6] py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto mb-12 max-w-3xl text-center">
+      <h2 class="mb-4 font-serif text-2xl font-bold text-gray-900 md:text-4xl">
+        O programa <span class="text-[#1A3626]">RESET</span> é para você que tem quaisquer
+        das queixas:
       </h2>
     </div>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2">
       {
         pains.map((pain) => (
-          <article class="bg-[#FDFBF7] p-8 rounded-2xl shadow-sm border border-[#E8E1DB]">
-            <div class="w-12 h-12 bg-[#1A3626]/10 rounded-full flex items-center justify-center mb-6">
-              <span class="text-[#1A3626] text-xl font-serif">!</span>
-            </div>
-            <h3 class="text-xl font-bold mb-3">{pain.title}</h3>
-            <p class="text-gray-600">{pain.desc}</p>
+          <article class="flex items-center gap-3 rounded-xl border border-[#E8E1DB] bg-[#FDFBF7] px-5 py-4">
+            <span class="mt-0.5 text-lg text-[#1A3626]">✦</span>
+            <p class="text-gray-700">{pain}</p>
           </article>
         ))
       }

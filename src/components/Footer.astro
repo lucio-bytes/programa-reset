@@ -1,25 +1,48 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 const year = new Date().getFullYear()
 ---
 
-<footer class="bg-[#1A3626] text-white py-12 mt-12">
+<footer class="bg-[#1A3626] py-12 text-white">
   <div
-    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center"
+    class="mx-auto flex max-w-7xl flex-col items-center px-4 sm:px-6 lg:px-8"
   >
-    <div class="text-2xl font-serif font-bold mb-6 text-[#FDFBF7]">
-      NutriName.
+    <div class="mb-2 font-serif text-2xl font-bold text-[#FDFBF7]">
+      Fabiana Kirch
     </div>
-    <p class="text-[#FDFBF7]/70 text-sm mb-6 text-center max-w-md">
-      Transformando vidas através da nutrição consciente e baseada em ciência.
+    <span class="mb-6 text-xs tracking-wider text-[#B08968] uppercase">
+      Método RESET
+    </span>
+    <p
+      class="mb-6 max-w-md text-center text-sm leading-relaxed text-[#FDFBF7]/70"
+    >
+      O intestino a favor do seu emagrecimento. Transforme seu corpo e sua
+      relação com a comida sem dietas restritivas.
     </p>
-    <div class="flex gap-6 text-sm text-[#FDFBF7]/60 mb-8">
-      <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
-      <a href="#" class="hover:text-white transition-colors"
-        >Política de Privacidade</a
-      >
+
+    <a
+      href="https://wa.me/5551983522637"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mb-8 flex items-center gap-2 text-sm text-[#FDFBF7]/70 transition-colors hover:text-white"
+    >
+      <Icon name="lucide:message-circle" class="h-4 w-4" />
+      WhatsApp: (51) 98352-2637
+    </a>
+
+    <div class="mb-8 flex gap-6 text-sm text-[#FDFBF7]/60">
+      <a href="#" class="transition-colors hover:text-white">Termos de Uso</a>
+      <a href="#" class="transition-colors hover:text-white">
+        Política de Privacidade
+      </a>
     </div>
+
     <p class="text-xs text-[#FDFBF7]/40">
-      &copy; {year} NutriName. Todos os direitos reservados.
+      &copy; {year} Fabiana Kirch. Todos os direitos reservados.
+    </p>
+    <p class="mt-1 text-xs text-[#FDFBF7]/30">
+      Este produto não substitui acompanhamento médico ou nutricional.
     </p>
   </div>
 </footer>

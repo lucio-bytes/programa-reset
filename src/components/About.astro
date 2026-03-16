@@ -1,62 +1,79 @@
 ---
+import { Icon } from 'astro-icon/components'
 
+const etapas = [
+  {
+    tag: 'Etapa 1',
+    title: 'Remover',
+    desc: 'A fase da "faxina interna". A detoxificação será feita por 7 dias, com foco na limpeza dos seus principais órgãos de eliminação: intestino e fígado. Remoção de alérgicos e redução de inflamações.',
+    descPlus: '',
+  },
+  {
+    tag: 'Etapa 2',
+    title: 'Equilibrar',
+    desc: 'Introdução dos alimentos que reestruturam a flora intestinal através do cardápio anti-inflamatório.',
+    descPlus: 'Shot intestinal exclusivo do programa para 30 dias.',
+  },
+]
+
+const bonus = [
+  'Guia com receitas para emagrecimento e saúde intestinal',
+  'Guia de suplementação',
+  'Guia emagrecimento — psicóloga Monique Machado',
+  'Planner para auto percepção e controle de hábitos',
+]
 ---
 
-<section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-  <div class="flex flex-col md:flex-row items-center gap-16">
-    <div class="flex-1 w-full max-w-md relative">
-      <div
-        class="absolute -inset-4 bg-[#F5EBE6] rounded-3xl -z-10 transform rotate-3"
-      >
-      </div>
-      <img
-        src="https://images.unsplash.com/photo-1594824436998-ef4f647970bb?q=80&w=800&auto=format&fit=crop"
-        alt="Foto da Nutricionista [Nome]"
-        class="w-full h-auto rounded-3xl shadow-lg"
-        loading="lazy"
-      />
-    </div>
-    <div class="flex-1">
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
-        Quem vai te guiar nessa jornada?
+<section class="bg-[#F5EBE6] py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto mb-14 max-w-3xl text-center">
+      <h2 class="mb-4 font-serif text-3xl font-bold text-gray-900 md:text-4xl">
+        O que vai receber no Programa RESET:
       </h2>
-      <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-        Olá, eu sou a <strong>[Nome da Nutri]</strong>. Sou nutricionista
-        clínica e especialista em emagrecimento feminino com mais de 5.000
-        pacientes transformadas.
-      </p>
-      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-        Minha missão é provar que você não precisa parar de comer o que gosta
-        para atingir o corpo dos seus sonhos. Criei este programa para reunir o
-        que há de mais moderno na ciência da nutrição em um passo a passo
-        simples e aplicável.
-      </p>
-      <ul class="space-y-4 mb-8">
-        <li class="flex items-center text-gray-700">
-          <svg
-            class="w-5 h-5 text-[#B08968] mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            ><path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"></path></svg
-          >
-          CRN: 12345/XX
-        </li>
-        <li class="flex items-center text-gray-700">
-          <svg
-            class="w-5 h-5 text-[#B08968] mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            ><path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"></path></svg
-          >
-          Especialista em Nutrição Comportamental
-        </li>
-      </ul>
+    </div>
+
+    <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+      {
+        etapas.map((etapa) => (
+          <article class="rounded-2xl border border-[#E8E1DB] bg-[#FDFBF7] p-8">
+            <span class="mb-2 inline-block rounded-full bg-[#1A3626] px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase">
+              {etapa.tag}
+            </span>
+            <h3 class="mb-3 font-serif text-2xl font-bold text-gray-900">
+              {etapa.title}
+            </h3>
+            {etapa.descPlus ? (
+              <ul class="mt-1 list-disc space-y-2 pl-5 leading-relaxed text-gray-600">
+                <li>{etapa.desc}</li>
+                <li>{etapa.descPlus}</li>
+              </ul>
+            ) : (
+              <p class="leading-relaxed text-gray-600">{etapa.desc}</p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+
+    <div
+      class="mx-auto mt-10 max-w-4xl rounded-2xl border border-[#E8E1DB] bg-[#FDFBF7] p-8"
+    >
+      <h3 class="mb-6 text-center font-serif text-2xl font-bold text-gray-900">
+        Bônus
+      </h3>
+      <div class="grid gap-3 sm:grid-cols-2">
+        {
+          bonus.map((item) => (
+            <div class="flex items-start gap-3">
+              <Icon
+                name="lucide:circle-check"
+                class="mt-0.5 h-5 w-5 shrink-0 text-[#B08968]"
+              />
+              <p class="text-gray-700">{item}</p>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>

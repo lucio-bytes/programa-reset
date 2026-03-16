@@ -1,62 +1,56 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 const faqs = [
   {
-    q: 'Por quanto tempo terei acesso?',
-    a: 'Você terá acesso integral ao programa e todas as atualizações por 1 ano inteiro.',
+    q: 'Posso iniciar quando eu quiser?',
+    a: 'Sim! Assim que você efetuar a compra, o programa pode ser iniciado quando você estiver preparada.',
   },
   {
-    q: 'E se eu não gostar? Tem garantia?',
-    a: 'Sim! Você tem 7 dias de garantia incondicional. Se achar que não é para você, devolvemos 100% do seu dinheiro.',
+    q: 'Quanto tempo dura o programa?',
+    a: 'A fase 1 dura 7 dias e a fase 2 pode ser seguida por até 30 dias.',
   },
   {
-    q: 'Serve para quem tem rotina corrida?',
-    a: 'Com certeza. O programa foi desenhado com aulas curtas e materiais práticos justamente para quem tem pouco tempo.',
+    q: 'O que fazer após efetuar a compra?',
+    a: 'Acesse a plataforma para visualizar os materiais.',
+  },
+  {
+    q: 'Quando recebo o meu shot EQUILÍBRIO FK?',
+    a: 'Até 15 dias após a sua compra (depende do endereço que você mora).',
+  },
+  {
+    q: 'Posso usar o shot depois que finalizar o protocolo?',
+    a: 'Sim, ele pode ser usado todos os dias.',
+  },
+  {
+    q: 'Eu terei suporte após a compra?',
+    a: 'Sim, qualquer dúvida pode entrar em contato pelo WhatsApp: 51.98352-2637.',
   },
 ]
 ---
 
-<section class="py-20 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-  <h2 class="text-3xl font-serif font-bold text-center text-gray-900 mb-12">
+<section class="bg-[#F5EBE6] px-4 py-20 sm:px-6 lg:px-8">
+  <h2 class="mb-12 text-center font-serif text-3xl font-bold text-gray-900">
     Perguntas Frequentes
   </h2>
-  <div class="space-y-4">
+  <div class="mx-auto max-w-3xl space-y-4">
     {
       faqs.map((faq) => (
-        <details class="group bg-white rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-gray-900 font-medium">
-            <h3 class="text-lg">{faq.q}</h3>
+        <details class="group rounded-xl border border-gray-100 bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-gray-900">
+            <h4 class="text-">{faq.q}</h4>
             <span class="relative h-5 w-5 shrink-0 text-[#1A3626]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0 transition-opacity"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 4v16m8-8H4"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 transition-opacity"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M20 12H4"
-                />
-              </svg>
+              <Icon
+                name="lucide:plus"
+                class="absolute inset-0 h-5 w-5 opacity-100 transition-opacity group-open:opacity-0"
+              />
+              <Icon
+                name="lucide:minus"
+                class="absolute inset-0 h-5 w-5 opacity-0 transition-opacity group-open:opacity-100"
+              />
             </span>
           </summary>
-          <p class="px-6 pb-6 text-gray-600 leading-relaxed">{faq.a}</p>
+          <p class="px-6 pb-6 leading-relaxed text-gray-600">{faq.a}</p>
         </details>
       ))
     }

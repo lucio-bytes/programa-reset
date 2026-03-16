@@ -6,7 +6,9 @@ import PainPoints from '../components/PainPoints.astro'
 import About from '../components/About.astro'
 import FAQ from '../components/FAQ.astro'
 import Footer from '../components/Footer.astro'
-import Button from '../components/Button.astro'
+import Problem from '../components/Problem.astro'
+import VideoSection from '../components/VideoSection.astro'
+import QuestionImpact from '../components/QuestionImpact.astro'
 ---
 
 <Layout
@@ -14,40 +16,14 @@ import Button from '../components/Button.astro'
   description="Transforme seu corpo e sua relação com a comida em 4 semanas com o método validado."
 >
   <Navbar />
-
   <main>
     <Hero />
     <PainPoints />
-
-    <section class="py-16 text-center px-4">
-      <h2 class="text-2xl font-serif font-bold mb-6 text-[#1A3626]">
-        Pronta para dar o primeiro passo?
-      </h2>
-      <Button href="#checkout" text="Quero Começar Agora" />
-    </section>
-
+    <VideoSection />
+    <QuestionImpact />
     <About />
+    <Problem />
     <FAQ />
-
-    <section class="py-24 bg-[#F5EBE6] text-center px-4">
-      <div class="max-w-2xl mx-auto">
-        <h2
-          class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6"
-        >
-          Não adie mais a sua saúde
-        </h2>
-        <p class="text-gray-600 mb-10 text-lg">
-          Aproveite o valor promocional e ganhe acesso imediato a todo o
-          material. Risco zero com nossa garantia de 7 dias.
-        </p>
-        <Button
-          href="#checkout"
-          text="Garantir Minha Vaga Agora"
-          className="text-lg py-5 px-10"
-        />
-      </div>
-    </section>
   </main>
-
   <Footer />
 </Layout>
