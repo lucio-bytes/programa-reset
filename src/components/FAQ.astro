@@ -30,29 +30,63 @@ const faqs = [
 ---
 
 <section class="bg-surface-alt px-4 py-20 sm:px-6 lg:px-8">
-  <h2 class="mb-12 text-center font-serif text-3xl font-bold text-gray-900">
+  <h2
+    class="mb-12 text-center font-serif text-3xl font-bold text-gray-900"
+    data-animate
+  >
     Perguntas Frequentes
   </h2>
-  <div class="mx-auto max-w-3xl space-y-4">
+  <div class="mx-auto max-w-3xl space-y-4" data-animate-stagger>
     {
       faqs.map((faq) => (
-        <details class="group rounded-xl border border-gray-100 bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-gray-900">
-            <h4 class="text-">{faq.q}</h4>
+        <div
+          class="faq-item rounded-xl border border-gray-100 bg-white shadow-sm"
+          data-animate
+        >
+          <button
+            class="faq-trigger flex w-full cursor-pointer items-center justify-between gap-1.5 p-6 text-left font-medium text-gray-900"
+            aria-expanded="false"
+          >
+            <h4>{faq.q}</h4>
             <span class="text-primary relative h-5 w-5 shrink-0">
               <Icon
                 name="lucide:plus"
-                class="absolute inset-0 h-5 w-5 opacity-100 transition-opacity group-open:opacity-0"
+                class="faq-icon-plus absolute inset-0 h-5 w-5 transition-all duration-300"
               />
               <Icon
                 name="lucide:minus"
-                class="absolute inset-0 h-5 w-5 opacity-0 transition-opacity group-open:opacity-100"
+                class="faq-icon-minus absolute inset-0 h-5 w-5 opacity-0 transition-all duration-300"
               />
             </span>
-          </summary>
-          <p class="px-6 pb-6 leading-relaxed text-gray-600">{faq.a}</p>
-        </details>
+          </button>
+          <div class="faq-body grid grid-rows-[0fr] transition-[grid-template-rows] duration-350 ease-[cubic-bezier(0.16,1,0.3,1)]">
+            <div class="overflow-hidden">
+              <p class="px-6 pb-6 leading-relaxed text-gray-600">{faq.a}</p>
+            </div>
+          </div>
+        </div>
       ))
     }
   </div>
 </section>
+
+<script>
+  import '../scripts/faq.ts'
+</script>
+
+<style>
+  .faq-item.open .faq-body {
+    grid-template-rows: 1fr;
+  }
+  .faq-item.open .faq-icon-plus {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  .faq-item.open .faq-icon-minus {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  .faq-icon-minus {
+    transform: rotate(-90deg);
+  }
+</style>
