@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<section class="bg-primary relative overflow-hidden py-20 text-white">
+  <div class="absolute top-0 left-0 h-full w-full opacity-10">
+    <div class="absolute -top-20 -left-20 h-64 w-64 rounded-full bg-white">
+    </div>
+    <div class="absolute -right-16 -bottom-16 h-48 w-48 rounded-full bg-white">
+    </div>
+  </div>
+
+  <div class="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+    <div
+      class="mb-6 inline-flex items-center justify-center rounded-full bg-white/20 p-4"
+      data-animate="scale"
+    >
+      <Icon name="lucide:heart-pulse" class="h-8 w-8" />
+    </div>
+
+    <p class="text-xl leading-relaxed font-light md:text-2xl" data-animate>
+      Você pode até comer "certinho", mas se ainda sente sintomas, é o seu corpo
+      avisando que <span class="font-bold">algo não vai bem</span>. E o cuidado
+      precisa começar pelo <span
+        class="font-bold underline decoration-white/60 decoration-2 underline-offset-4"
+        >intestino</span
+      >!
+    </p>
+
+    <div class="mx-auto my-8 h-px w-16 bg-white/30"></div>
+
+    <p
+      class="text-lg leading-relaxed font-light text-white/90 md:text-xl"
+      data-animate
+    >
+      Ele é o centro de equilíbrio do organismo — quando não está saudável, todo
+      resto tende a sair do eixo.
+    </p>
+
+    <p
+      class="mt-6 text-xl font-semibold tracking-wide md:text-2xl"
+      data-animate
+    >
+      Cuidar do intestino é cuidar do corpo como um todo.
+    </p>
+  </div>
+</section>

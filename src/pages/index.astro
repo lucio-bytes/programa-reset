@@ -3,26 +3,31 @@ import Layout from '../layouts/Layout.astro'
 import Navbar from '../components/Navbar.astro'
 import Hero from '../components/Hero.astro'
 import PainPoints from '../components/PainPoints.astro'
+import PainQuestion from '../components/PainQuestion.astro'
 import FAQ from '../components/FAQ.astro'
 import Footer from '../components/Footer.astro'
 import Phases from '../components/Phases.astro'
 import Problem from '../components/Problem.astro'
 import BeforeAfter from '../components/BeforeAfter.astro'
-import VideoSection from '../components/VideoSection.astro'
 import QuestionImpact from '../components/QuestionImpact.astro'
+import ProfileBreak from '../components/ProfileBreak.astro'
+import profile2 from '../assets/images/profile2.jpg'
+import profile3 from '../assets/images/profile3.jpg'
 ---
 
 <Layout
   title="RESET - O intestino a favor do seu emagrecimento"
-  description="Transforme seu corpo e sua relação com a comida em 4 semanas com o método validado."
+  description="28 dias para desinflamar, devolver a sua vitalidade e destravar o seu emagrecimento."
 >
   <Navbar />
   <main>
     <Hero />
     <PainPoints />
-    <VideoSection />
+    <PainQuestion />
     <QuestionImpact />
+    <ProfileBreak src={profile2} />
     <Phases />
+    <ProfileBreak src={profile3} />
     <Problem />
     <BeforeAfter />
     <FAQ />

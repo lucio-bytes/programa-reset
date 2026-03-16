@@ -1,49 +1,64 @@
 ---
 import Button from './Button.astro'
 import { Icon } from 'astro-icon/components'
-import heroImg from '../assets/images/hero.jpg'
+import videoSrc from '../assets/video/problem.mp4'
+import profileImg from '../assets/images/profile1.jpg'
 ---
 
-<section
-  class="xs:h-fit xs:pt-12 xs:pb-28 xs:gap-12 mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center gap-6 px-4 pt-4 pb-10 sm:px-6 md:flex-row lg:px-8"
->
-  <div class="flex-1 text-center md:text-left" data-animate="hero-text">
-    <h1
-      class="mb-10 font-serif text-3xl leading-tight font-bold text-gray-900 md:text-4xl lg:text-5xl"
-    >
-      <span class="text-primary font-black">RESET</span> — O intestino a favor do
-      seu emagrecimento
-    </h1>
-    <p
-      class="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-gray-600 md:mx-0"
-    >
-      Acabe com o inchaço, recupere sua energia e transforme sua relação com a
-      comida sem dietas restritivas.
-      <!-- <span class="font-bold text-gray-800">2 etapas</span>. -->
-    </p>
-    <Button />
-    <p
-      class="mt-4 flex items-center justify-center gap-2 text-xs text-gray-500 md:justify-start"
-    >
-      <Icon name="lucide:check" class="text-primary h-4 w-4" />
-      Acesso imediato após a compra
-    </p>
-  </div>
-  <div
-    class="w-full max-w-md md:max-w-full md:flex-1"
-    data-animate="hero-image"
-  >
-    <div
-      class="bg-surface-alt relative aspect-4/3 overflow-hidden rounded-full rounded-b-3xl shadow-2xl md:aspect-4/5"
-    >
-      <img
-        src={heroImg.src}
-        alt="Mulher sorrindo comendo refeição saudável"
-        class="h-full w-full rounded-2xl object-cover opacity-90"
-      />
-      <div
-        class="from-primary-hover/40 absolute inset-0 rounded-2xl bg-linear-to-t to-transparent"
+<section class="bg-surface">
+  <!-- Vídeo em destaque no topo -->
+  <div class="w-full" data-animate="scale">
+    <div class="mx-auto max-w-5xl px-4 pt-24 pb-8 sm:px-6 lg:px-8">
+      <p
+        class="mb-4 text-center text-sm font-medium tracking-wide text-gray-500 uppercase"
       >
+        Assista antes de continuar
+      </p>
+      <div class="overflow-hidden rounded-2xl shadow-2xl">
+        <video
+          class="aspect-video w-full"
+          controls
+          preload="metadata"
+          playsinline
+        >
+          <source src={videoSrc} type="video/mp4" />
+          Seu navegador não suporta a reprodução de vídeos.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Texto + perfil + CTA -->
+  <div class="mx-auto max-w-5xl px-4 pt-4 pb-16 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+      <!-- Foto de perfil -->
+      <div class="shrink-0" data-animate="hero-image">
+        <img
+          src={profileImg.src}
+          alt="Foto da profissional"
+          class="h-48 w-48 rounded-full object-cover shadow-lg ring-4 ring-white md:h-60 md:w-60"
+        />
+      </div>
+
+      <!-- Texto e CTA -->
+      <div class="text-center md:text-left" data-animate="hero-text">
+        <h1
+          class="mb-4 font-serif text-3xl leading-tight font-bold text-gray-900 md:text-4xl lg:text-5xl"
+        >
+          <span class="text-primary font-black">RESET</span> — O intestino a favor
+          do seu emagrecimento
+        </h1>
+        <p class="mb-6 max-w-xl text-lg leading-relaxed text-gray-600">
+          28 dias para desinflamar, devolver a sua vitalidade e destravar o seu
+          emagrecimento.
+        </p>
+        <div class="flex flex-col items-center gap-3 md:items-start">
+          <Button />
+          <p class="flex items-center gap-2 text-xs text-gray-500">
+            <Icon name="lucide:check" class="text-primary h-4 w-4" />
+            Acesso imediato após a compra
+          </p>
+        </div>
       </div>
     </div>
   </div>
