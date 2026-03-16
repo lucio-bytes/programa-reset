@@ -4,44 +4,36 @@ import { Icon } from 'astro-icon/components'
 const year = new Date().getFullYear()
 ---
 
-<footer class="bg-[#1A3626] py-12 text-white">
+<footer class="bg-primary py-12 text-white">
   <div
-    class="mx-auto flex max-w-7xl flex-col items-center px-4 sm:px-6 lg:px-8"
+    class="mx-auto flex max-w-7xl flex-col items-center px-4 text-center sm:px-6 lg:px-8"
   >
-    <div class="mb-2 font-serif text-2xl font-bold text-[#FDFBF7]">
-      Fabiana Kirch
+    <div class="text-surface mb-2 font-serif text-xl font-bold">
+      Fabiana Kirch | Nutricionista
     </div>
-    <span class="mb-6 text-xs tracking-wider text-[#B08968] uppercase">
-      Método RESET
+    <span class="text-accent mb-2 text-xs tracking-wider uppercase">
+      Programa RESET
     </span>
     <p
-      class="mb-6 max-w-md text-center text-sm leading-relaxed text-[#FDFBF7]/70"
+      class="text-surface/70 mb-6 max-w-md text-center text-sm leading-relaxed"
     >
-      O intestino a favor do seu emagrecimento. Transforme seu corpo e sua
-      relação com a comida sem dietas restritivas.
+      O intestino a favor do seu emagrecimento.
     </p>
 
     <a
       href="https://wa.me/5551983522637"
       target="_blank"
       rel="noopener noreferrer"
-      class="mb-8 flex items-center gap-2 text-sm text-[#FDFBF7]/70 transition-colors hover:text-white"
+      class="text-surface/70 mb-8 flex items-center gap-2 text-sm transition-colors hover:text-white"
     >
       <Icon name="lucide:message-circle" class="h-4 w-4" />
       WhatsApp: (51) 98352-2637
     </a>
 
-    <div class="mb-8 flex gap-6 text-sm text-[#FDFBF7]/60">
-      <a href="#" class="transition-colors hover:text-white">Termos de Uso</a>
-      <a href="#" class="transition-colors hover:text-white">
-        Política de Privacidade
-      </a>
-    </div>
-
-    <p class="text-xs text-[#FDFBF7]/40">
+    <p class="text-surface/40 text-xs">
       &copy; {year} Fabiana Kirch. Todos os direitos reservados.
     </p>
-    <p class="mt-1 text-xs text-[#FDFBF7]/30">
+    <p class="text-surface/30 mt-1 text-xs">
       Este produto não substitui acompanhamento médico ou nutricional.
     </p>
   </div>

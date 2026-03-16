@@ -13,19 +13,19 @@ const pains = [
 ]
 ---
 
-<section class="bg-[#F5EBE6] py-20">
+<section class="bg-surface-alt py-20">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto mb-12 max-w-3xl text-center">
       <h2 class="mb-4 font-serif text-2xl font-bold text-gray-900 md:text-4xl">
-        O programa <span class="text-[#1A3626]">RESET</span> é para você que tem quaisquer
+        O programa <span class="text-primary">RESET</span> é para você que tem quaisquer
         das queixas:
       </h2>
     </div>
     <div class="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2">
       {
         pains.map((pain) => (
-          <article class="flex items-center gap-3 rounded-xl border border-[#E8E1DB] bg-[#FDFBF7] px-5 py-4">
-            <span class="mt-0.5 text-lg text-[#1A3626]">✦</span>
+          <article class="border-border bg-surface flex items-center gap-3 rounded-xl border px-5 py-4">
+            <span class="text-primary mt-0.5 text-lg">✦</span>
             <p class="text-gray-700">{pain}</p>
           </article>
         ))

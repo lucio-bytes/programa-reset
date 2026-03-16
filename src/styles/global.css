@@ -2,4 +2,11 @@
 
 @theme {
     --breakpoint-xs: 376px;
+
+    --color-primary: #1A3626;
+    --color-primary-hover: #2C4C3B;
+    --color-accent: #B08968;
+    --color-surface: #FDFBF7;
+    --color-surface-alt: #F5EBE6;
+    --color-border: #E8E1DB;
 }

@@ -8,34 +8,30 @@ import heroImg from '../assets/images/hero.jpg'
   class="xs:h-fit xs:pt-12 xs:pb-28 xs:gap-12 mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center gap-6 px-4 pt-4 pb-10 sm:px-6 md:flex-row lg:px-8"
 >
   <div class="flex-1 text-center md:text-left">
-    <h4 class="font-black text-[#1A3626]">RESET</h4>
-    <span
-      class="mb-4 block text-sm font-semibold tracking-wider text-[#B08968] uppercase"
-    >
-      O intestino a favor do seu emagrecimento</span
-    >
     <h1
-      class="mb-6 font-serif text-4xl leading-tight font-bold text-gray-900 md:text-5xl lg:text-6xl"
+      class="mb-10 font-serif text-3xl leading-tight font-bold text-gray-900 md:text-4xl lg:text-5xl"
     >
-      Conquiste sua melhor versão sem dietas restritivas.
+      <span class="text-primary font-black">RESET</span> — O intestino a favor do
+      seu emagrecimento
     </h1>
-    <p class="mx-auto mb-8 max-w-xl text-lg text-gray-600 md:mx-0">
-      Um método validado para acabar com o inchaço, recuperar sua energia e
-      transformar sua relação com a comida em apenas <span class="font-bold"
-        >2 etapas</span
-      >.
+    <p
+      class="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-gray-600 md:mx-0"
+    >
+      Acabe com o inchaço, recupere sua energia e transforme sua relação com a
+      comida sem dietas restritivas.
+      <!-- <span class="font-bold text-gray-800">2 etapas</span>. -->
     </p>
-    <Button href="#checkout" text="Quero Começar Agora" />
+    <Button href="#checkout" text="Quero começar agora" />
     <p
       class="mt-4 flex items-center justify-center gap-2 text-xs text-gray-500 md:justify-start"
     >
-      <Icon name="lucide:check" class="h-4 w-4 text-[#1A3626]" />
+      <Icon name="lucide:check" class="text-primary h-4 w-4" />
       Acesso imediato após a compra
     </p>
   </div>
   <div class="w-full max-w-md md:max-w-full md:flex-1">
     <div
-      class="relative aspect-4/3 overflow-hidden rounded-full rounded-b-3xl bg-[#F5EBE6] shadow-2xl md:aspect-4/5"
+      class="bg-surface-alt relative aspect-4/3 overflow-hidden rounded-full rounded-b-3xl shadow-2xl md:aspect-4/5"
     >
       <img
         src={heroImg.src}
@@ -43,7 +39,7 @@ import heroImg from '../assets/images/hero.jpg'
         class="h-full w-full rounded-2xl object-cover opacity-90"
       />
       <div
-        class="absolute inset-0 rounded-2xl bg-linear-to-t from-[#2C4C3B]/40 to-transparent"
+        class="from-primary-hover/40 absolute inset-0 rounded-2xl bg-linear-to-t to-transparent"
       >
       </div>
     </div>
