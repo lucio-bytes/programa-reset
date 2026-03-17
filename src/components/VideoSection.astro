@@ -1,28 +1,23 @@
 ---
 import videoSrc from '../assets/video/problem.mp4'
+import posterImg from '../assets/images/thumbnail.png'
 ---
 
-<section class="bg-surface py-20">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<section class="bg-surface py-16 sm:py-20">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
     <h2
-      class="mb-4 text-center font-serif text-3xl font-bold text-gray-900 md:text-4xl"
+      class="mb-10 text-center font-serif text-2xl font-bold text-gray-900 sm:text-3xl"
       data-animate
     >
       Entenda o que está acontecendo com o seu corpo
     </h2>
-    <p
-      class="mx-auto mb-10 max-w-xl text-center text-lg text-gray-600"
-      data-animate
-    >
-      Assista ao vídeo e descubra por que o seu intestino pode ser a chave para
-      o emagrecimento.
-    </p>
-    <div class="overflow-hidden rounded-2xl" data-animate="scale">
+    <div class="overflow-hidden rounded-2xl shadow-2xl" data-animate="scale">
       <video
         class="aspect-video w-full"
         controls
         preload="metadata"
         playsinline
+        poster={posterImg.src}
       >
         <source src={videoSrc} type="video/mp4" />
         Seu navegador não suporta a reprodução de vídeos.
