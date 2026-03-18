@@ -5,12 +5,14 @@ const etapas = [
   {
     tag: 'Etapa 1',
     title: 'Remover',
+    subTitle: '- Vamos preparar o seu terreno biológico',
     desc: 'A fase da "faxina interna". A detoxificação será feita por 7 dias, com foco na limpeza dos seus principais órgãos de eliminação: intestino e fígado. Remoção de alérgicos e redução de inflamações.',
     descPlus: '',
   },
   {
     tag: 'Etapa 2',
     title: 'Equilibrar',
+    subTitle: '- Hora de perder gordura',
     desc: 'Introdução dos alimentos que reestruturam a flora intestinal através do cardápio anti-inflamatório.',
     descPlus: 'Shot intestinal exclusivo do programa para 30 dias.',
   },
@@ -47,8 +49,11 @@ const bonus = [
             <span class="bg-primary mb-2 inline-block rounded-full px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase">
               {etapa.tag}
             </span>
-            <h3 class="mb-3 font-serif text-2xl font-bold text-gray-900">
+            <h3 class="mb-3 font-sans text-2xl font-bold text-gray-900">
               {etapa.title}
+              <span class="text-primary/70 font-sans text-base font-extrabold tracking-wide">
+                {etapa.subTitle}
+              </span>
             </h3>
             {etapa.descPlus ? (
               <ul class="mt-1 list-disc space-y-2 pl-5 leading-relaxed text-gray-600">
@@ -67,9 +72,7 @@ const bonus = [
       class="border-border bg-surface mx-auto mt-10 max-w-4xl rounded-2xl border p-8"
       data-animate
     >
-      <h3 class="mb-6 text-center font-serif text-2xl font-bold text-gray-900">
-        Bônus
-      </h3>
+      <h3 class="mb-6 text-center text-2xl font-bold text-gray-900">Bônus</h3>
       <div class="grid gap-3 sm:grid-cols-2">
         {
           bonus.map((item) => (
